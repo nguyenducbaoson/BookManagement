@@ -1,0 +1,544 @@
+2025-06-03 15:52:26,465 - INFO - Deleting book with id: faa72881-f1f1-44fd-98fa-e3b03679950b
+2025-06-03 15:52:26,684 - INFO - Book deleted successfully with id: faa72881-f1f1-44fd-98fa-e3b03679950b
+2025-06-03 15:52:26,687 - INFO - Fetching all books
+2025-06-03 15:57:10,135 - INFO - Fetching all books
+2025-06-03 15:57:21,945 - INFO - Fetching all books
+2025-06-03 15:57:21,972 - INFO - Fetching all books
+2025-06-03 15:57:24,661 - INFO - Deleting book with id: 875aa690-6c1b-4ba7-931c-5ea6e7ac0198
+2025-06-03 15:57:24,720 - INFO - Book deleted successfully with id: 875aa690-6c1b-4ba7-931c-5ea6e7ac0198
+2025-06-03 15:57:24,723 - INFO - Fetching all books
+2025-06-03 15:58:33,691 - INFO - Fetching all books
+2025-06-03 15:58:49,864 - INFO - Creating book with title: string
+2025-06-03 15:58:49,919 - INFO - Book created successfully with id: 34207acf-64fc-45ee-8bd9-00cb785afac8
+2025-06-03 15:59:00,040 - ERROR - Validation error: [{'type': 'less_than_equal', 'loc': ('body', 'year'), 'msg': 'Input should be less than or equal to 2100', 'input': 2222, 'ctx': {'le': 2100}}]
+2025-06-03 15:59:06,795 - ERROR - Validation error: [{'type': 'string_too_short', 'loc': ('body', 'description'), 'msg': 'String should have at least 10 characters', 'input': '1', 'ctx': {'min_length': 10}}, {'type': 'less_than_equal', 'loc': ('body', 'year'), 'msg': 'Input should be less than or equal to 2100', 'input': 2222, 'ctx': {'le': 2100}}]
+2025-06-03 15:59:29,805 - INFO - Fetching book with id: 4d8ac13a-6ac9-46c2-a09b-b5f384ec7307
+2025-06-03 15:59:29,829 - INFO - Book fetched successfully with id: 4d8ac13a-6ac9-46c2-a09b-b5f384ec7307
+2025-06-03 15:59:40,296 - INFO - Updating book with id: 4d8ac13a-6ac9-46c2-a09b-b5f384ec730
+2025-06-03 15:59:40,321 - WARNING - Book update failed - not found id: 4d8ac13a-6ac9-46c2-a09b-b5f384ec730
+2025-06-03 15:59:40,322 - ERROR - HTTP error: Book not exists (status 404)
+2025-06-03 15:59:56,795 - ERROR - Validation error: [{'type': 'string_too_short', 'loc': ('body', 'description'), 'msg': 'String should have at least 10 characters', 'input': '3', 'ctx': {'min_length': 10}}]
+2025-06-03 16:00:10,750 - INFO - Updating book with id: 4d8ac13a-6ac9-46c2-a09b-b5f384ec7307
+2025-06-03 16:00:10,827 - INFO - Book updated successfully with id: 4d8ac13a-6ac9-46c2-a09b-b5f384ec7307
+2025-06-03 16:00:19,158 - INFO - Fetching all books
+2025-06-03 16:00:28,104 - INFO - Deleting book with id: 4d8ac13a-6ac9-46c2-a09b-b5f384ec7307
+2025-06-03 16:00:28,157 - INFO - Book deleted successfully with id: 4d8ac13a-6ac9-46c2-a09b-b5f384ec7307
+2025-06-03 16:00:31,935 - INFO - Fetching all books
+2025-06-03 16:00:48,177 - INFO - Fetching all books
+2025-06-03 16:00:48,204 - INFO - Fetching all books
+2025-06-03 16:00:49,332 - INFO - Deleting book with id: cf5d629d-a2b1-4256-926e-136613606f8c
+2025-06-03 16:00:49,385 - INFO - Book deleted successfully with id: cf5d629d-a2b1-4256-926e-136613606f8c
+2025-06-03 16:00:49,388 - INFO - Fetching all books
+2025-06-03 16:00:50,571 - INFO - Deleting book with id: f81567d9-93b8-4c3a-9f95-a933c937df42
+2025-06-03 16:00:50,624 - INFO - Book deleted successfully with id: f81567d9-93b8-4c3a-9f95-a933c937df42
+2025-06-03 16:00:50,626 - INFO - Fetching all books
+2025-06-03 16:00:51,756 - INFO - Deleting book with id: 34207acf-64fc-45ee-8bd9-00cb785afac8
+2025-06-03 16:00:51,809 - INFO - Book deleted successfully with id: 34207acf-64fc-45ee-8bd9-00cb785afac8
+2025-06-03 16:00:51,812 - INFO - Fetching all books
+2025-06-03 16:01:03,609 - INFO - Importing books from CSV file: book.csv
+2025-06-03 16:01:03,755 - INFO - Imported 5 books successfully from CSV
+2025-06-03 16:01:09,085 - INFO - Fetching all books
+2025-06-03 16:01:09,330 - INFO - Fetching all books
+2025-06-03 16:01:20,596 - INFO - Fetching all books
+2025-06-03 16:01:20,624 - INFO - Fetching all books
+2025-06-03 16:01:33,728 - INFO - Creating book with title: sssssssss
+2025-06-03 16:01:33,781 - INFO - Book created successfully with id: 97fa60f0-32e8-46f7-8cd9-4a788daaefa3
+2025-06-03 16:01:33,784 - INFO - Fetching all books
+2025-06-03 16:01:47,526 - INFO - Updating book with id: 97fa60f0-32e8-46f7-8cd9-4a788daaefa3
+2025-06-03 16:01:47,607 - INFO - Book updated successfully with id: 97fa60f0-32e8-46f7-8cd9-4a788daaefa3
+2025-06-03 16:01:47,610 - INFO - Fetching all books
+2025-06-03 16:01:51,646 - INFO - Deleting book with id: 97fa60f0-32e8-46f7-8cd9-4a788daaefa3
+2025-06-03 16:01:51,697 - INFO - Book deleted successfully with id: 97fa60f0-32e8-46f7-8cd9-4a788daaefa3
+2025-06-03 16:01:51,700 - INFO - Fetching all books
+2025-06-03 16:01:54,138 - INFO - Deleting book with id: b6dfab03-588e-4953-afce-ff1a447e2418
+2025-06-03 16:01:54,192 - INFO - Book deleted successfully with id: b6dfab03-588e-4953-afce-ff1a447e2418
+2025-06-03 16:01:54,195 - INFO - Fetching all books
+2025-06-03 16:01:55,740 - INFO - Deleting book with id: 4b2b4d14-87f0-4cb1-ad94-b4a2f38d5831
+2025-06-03 16:01:55,792 - INFO - Book deleted successfully with id: 4b2b4d14-87f0-4cb1-ad94-b4a2f38d5831
+2025-06-03 16:01:55,794 - INFO - Fetching all books
+2025-06-03 16:01:56,972 - INFO - Deleting book with id: 5105c0c9-b54a-40dc-874d-fc42a58666ff
+2025-06-03 16:01:57,024 - INFO - Book deleted successfully with id: 5105c0c9-b54a-40dc-874d-fc42a58666ff
+2025-06-03 16:01:57,027 - INFO - Fetching all books
+2025-06-03 16:01:58,278 - INFO - Deleting book with id: e0fb8ce8-4ecb-450b-ba69-42e259387b43
+2025-06-03 16:01:58,332 - INFO - Book deleted successfully with id: e0fb8ce8-4ecb-450b-ba69-42e259387b43
+2025-06-03 16:01:58,335 - INFO - Fetching all books
+2025-06-03 16:01:59,286 - INFO - Deleting book with id: 775387b3-b4e3-41f0-a223-7112a9126ad3
+2025-06-03 16:01:59,338 - INFO - Book deleted successfully with id: 775387b3-b4e3-41f0-a223-7112a9126ad3
+2025-06-03 16:01:59,340 - INFO - Fetching all books
+2025-06-03 16:02:03,305 - INFO - Importing books from CSV file: book.csv
+2025-06-03 16:02:03,448 - INFO - Imported 5 books successfully from CSV
+2025-06-03 16:02:03,451 - INFO - Fetching all books
+2025-06-03 16:05:42,150 - INFO - Fetching all books
+2025-06-03 16:05:42,178 - INFO - Fetching all books
+2025-06-04 08:55:39,564 - INFO - Fetching all books
+2025-06-04 08:55:39,811 - INFO - Fetching book with id: favicon.ico
+2025-06-04 08:55:39,836 - WARNING - Book not found with id: favicon.ico
+2025-06-04 08:55:39,837 - ERROR - HTTP error: Book not exists (status 404)
+2025-06-04 08:59:31,429 - INFO - Fetching all books
+2025-06-04 08:59:31,702 - INFO - Fetching book with id: favicon.ico
+2025-06-04 08:59:31,726 - WARNING - Book not found with id: favicon.ico
+2025-06-04 08:59:31,726 - ERROR - HTTP error: Book not exists (status 404)
+2025-06-04 09:01:06,484 - INFO - Fetching all books
+2025-06-04 09:01:17,757 - INFO - Fetching all books
+2025-06-04 09:05:33,336 - INFO - Fetching all books
+2025-06-04 09:07:50,552 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-04 09:08:07,708 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 09:08:41,473 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+        errors=_normalize_errors(errors), body=response_content
+    )
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': [{'item_id': 1, 'owner': 'edward'}]}
+
+2025-06-04 09:09:21,192 - ERROR - HTTP error: Incorrect username or password (status 401)
+2025-06-04 09:09:27,643 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+        errors=_normalize_errors(errors), body=response_content
+    )
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': [{'item_id': 1, 'owner': 'edward'}]}
+
+2025-06-04 09:11:06,723 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+        errors=_normalize_errors(errors), body=response_content
+    )
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': [{'item_id': 1, 'owner': 'edward'}]}
+
+2025-06-04 09:14:17,472 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+        errors=_normalize_errors(errors), body=response_content
+    )
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': [{'item_id': 1, 'owner': 'edward'}]}
+
+2025-06-04 09:17:14,847 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 09:17:23,463 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 09:17:34,127 - INFO - Fetching all books
+2025-06-04 09:21:16,291 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 09:21:21,740 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 09:21:40,155 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Hoa\Desktop\Python\Book\PythonBook\code\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-04 09:21:54,028 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 09:21:57,665 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 09:22:22,478 - ERROR - HTTP error: Incorrect username or password (status 401)
+2025-06-04 09:22:35,056 - INFO - Fetching all books
+2025-06-04 10:25:24,763 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-06-04 10:25:42,876 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-06-04 10:44:17,105 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-04 10:45:00,845 - INFO - Fetching all books
+2025-06-04 10:45:38,158 - INFO - Deleting book with id: 97f25bda-f305-4af2-b54d-f706845f01af
+2025-06-04 10:45:38,225 - INFO - Book deleted successfully with id: 97f25bda-f305-4af2-b54d-f706845f01af
+2025-06-04 10:45:42,405 - INFO - Fetching all books
+2025-06-04 10:45:58,061 - INFO - Fetching all books
+2025-06-04 10:46:08,269 - ERROR - Validation error: [{'type': 'string_too_short', 'loc': ('body', 'title'), 'msg': 'String should have at least 1 character', 'input': '', 'ctx': {'min_length': 1}}]
+2025-06-04 10:46:14,744 - ERROR - Validation error: [{'type': 'string_too_short', 'loc': ('body', 'description'), 'msg': 'String should have at least 10 characters', 'input': 's', 'ctx': {'min_length': 10}}]
+2025-06-04 10:46:21,511 - ERROR - Validation error: [{'type': 'string_too_short', 'loc': ('body', 'description'), 'msg': 'String should have at least 10 characters', 'input': 's', 'ctx': {'min_length': 10}}, {'type': 'greater_than_equal', 'loc': ('body', 'year'), 'msg': 'Input should be greater than or equal to 0', 'input': -1, 'ctx': {'ge': 0}}]
+2025-06-04 10:46:32,343 - INFO - Updating book with id: f707f4b8-fef9-491f-a729-2ce5c143a51a
+2025-06-04 10:46:32,708 - INFO - Book updated successfully with id: f707f4b8-fef9-491f-a729-2ce5c143a51a
+2025-06-04 10:46:37,287 - INFO - Fetching all books
+2025-06-04 10:46:53,348 - INFO - Creating book with title: string
+2025-06-04 10:46:53,379 - WARNING - Book creation failed - duplicate title: string
+2025-06-04 10:46:53,380 - ERROR - HTTP error: Book title already exists (status 400)
+2025-06-04 10:46:59,502 - INFO - Creating book with title: string222
+2025-06-04 10:46:59,570 - INFO - Book created successfully with id: 4d728e23-672c-48b6-b5c2-8907623bd056
+2025-06-04 10:47:04,560 - INFO - Creating book with title: string
+2025-06-04 10:47:04,848 - WARNING - Book creation failed - duplicate title: string
+2025-06-04 10:47:04,849 - ERROR - HTTP error: Book title already exists (status 400)
+2025-06-04 10:47:10,292 - INFO - Creating book with title: 2222222222
+2025-06-04 10:47:10,359 - INFO - Book created successfully with id: 855fdd26-fa4a-4a4d-9e71-f18e8e6b90c9
+2025-06-04 10:47:13,845 - INFO - Fetching all books
+2025-06-04 11:03:28,137 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-04 11:03:28,387 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+        errors=_normalize_errors(errors), body=response_content
+    )
+fastapi.exceptions.ResponseValidationError: 2 validation errors:
+  {'type': 'missing', 'loc': ('response', 'access_token'), 'msg': 'Field required', 'input': {'success': True, 'message_key': 'login_success', 'data': {'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZHdhcmQiLCJleHAiOjE3NDkwMTE2MDh9._wN-9V0uOunOQtrqVFze7xiwX9ofSBSw5EPiQ1en48M', 'token_type': 'bearer'}, 'errors': None}}
+  {'type': 'missing', 'loc': ('response', 'token_type'), 'msg': 'Field required', 'input': {'success': True, 'message_key': 'login_success', 'data': {'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZHdhcmQiLCJleHAiOjE3NDkwMTE2MDh9._wN-9V0uOunOQtrqVFze7xiwX9ofSBSw5EPiQ1en48M', 'token_type': 'bearer'}, 'errors': None}}
+
+2025-06-04 11:04:56,527 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-04 11:04:56,779 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+        errors=_normalize_errors(errors), body=response_content
+    )
+fastapi.exceptions.ResponseValidationError: 2 validation errors:
+  {'type': 'missing', 'loc': ('response', 'access_token'), 'msg': 'Field required', 'input': {'success': True, 'message_key': 'login_success', 'data': {'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZHdhcmQiLCJleHAiOjE3NDkwMTE2OTZ9.SfTHN-1gK0NCcGK_ApMzif4GLYPdDJO_cvLHTmD6CM0', 'token_type': 'bearer'}, 'errors': None}}
+  {'type': 'missing', 'loc': ('response', 'token_type'), 'msg': 'Field required', 'input': {'success': True, 'message_key': 'login_success', 'data': {'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZHdhcmQiLCJleHAiOjE3NDkwMTE2OTZ9.SfTHN-1gK0NCcGK_ApMzif4GLYPdDJO_cvLHTmD6CM0', 'token_type': 'bearer'}, 'errors': None}}
+
+2025-06-04 11:07:34,207 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-04 11:08:01,654 - ERROR - HTTP error: invalid_credentials (status 401)
+2025-06-04 11:08:42,897 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hoa\Desktop\Python\BookManagement\app\routers\auth.py", line 19, in login_for_access_token
+    raise HTTPException(
+          ~~~~~~~~~~~~~^
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_key=MessageKeys.INVALID_CREDENTIALS,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        headers={"WWW-Authenticate": "Bearer"},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: HTTPException.__init__() got an unexpected keyword argument 'message_key'
+2025-06-04 11:09:15,393 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "c:\Users\Hoa\Desktop\Python\BookManagement\.venv\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hoa\Desktop\Python\BookManagement\app\routers\auth.py", line 19, in login_for_access_token
+    raise make_response(
+          ~~~~~~~~~~~~~^
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_key=MessageKeys.INVALID_CREDENTIALS,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        headers={"WWW-Authenticate": "Bearer"},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: make_response() got an unexpected keyword argument 'status_code'
+2025-06-04 11:09:27,545 - ERROR - HTTP error: invalid_credentials (status 401)
+2025-06-04 11:11:56,061 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:12:14,677 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:12:30,206 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:19:10,334 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:19:11,287 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:19:20,669 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:20:16,877 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:21:35,087 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:21:36,543 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:21:37,047 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:21:37,361 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:21:37,513 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:21:37,685 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:22:59,006 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:24:17,593 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:24:19,403 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:24:19,861 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:24:20,016 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:24:20,408 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:24:20,559 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:24:20,714 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:24:20,876 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:24:43,601 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:25:09,266 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:25:18,969 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:25:20,368 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:25:20,758 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:25:20,910 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:25:21,064 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:25:42,303 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:25:48,537 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:25:52,395 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:26:27,856 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-04 11:27:53,615 - ERROR - HTTP error: Not authenticated (status 401)
