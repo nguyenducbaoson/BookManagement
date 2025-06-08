@@ -46,3 +46,10 @@ class StandardResponse(BaseModel):
     message_key: str
     data: Optional[Any]
     errors: Optional[Any]
+
+class StandardResponseWithData(StandardResponse):
+    data: Any = Field(..., description="Response data")
+    errors: Optional[Any] = None
+class StandardResponseWithErrors(StandardResponse):
+    data: Optional[Any] = None
+    errors: Any = Field(..., description="Response errors")
