@@ -140,6 +140,22 @@ async def import_books_csv(file: UploadFile = File(...)):
             }
             collection.insert_one(book_dict)
             inserted_ids.append(book_dict["id"])
+            collection.update_one(
+                {"id": book_dict["id"]},
+                {"$setOnInsert": book_dict},
+                upsert=True
+            )
+        if not inserted_ids:
+            logger.warning("No books were imported from the CSV file")
+            raise HTTPException(status_code=400, detail="No valid books found in the CSV file")
+        
+        if len(inserted_ids) != len(set(inserted_ids)):
+            logger.warning("Duplicate book entries found in the CSV file")
+            raise HTTPException(status_code=400, detail="Duplicate book entries found in the CSV file")
+        
+        if len(inserted_ids) > 1000:
+            logger.warning("Too many books imported from CSV, limit is 1000")
+            raise HTTPException(status_code=400, detail="Too many books imported from CSV, limit is 1000")
 
         logger.info(f"Imported {len(inserted_ids)} books successfully from CSV")
         return {
