@@ -52,5 +52,19 @@ async def get_current_active_user(current_user: UserInDB = Depends(get_current_u
             data=None,
             errors=None
         )
-    )     
+    )
     return current_user
+
+async def get_current_active_superuser(current_user: UserInDB = Depends(get_current_active_user)):
+    if not current_user.is_superuser:
+        raise JSONResponse(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            content=make_response(
+                success=False,
+                message_key=MessageKeys.NOT_AUTHENTICATED,
+                data=None,
+                errors=None
+            )
+        )
+    
+    
