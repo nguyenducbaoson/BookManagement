@@ -53,3 +53,7 @@ class StandardResponseWithData(StandardResponse):
 class StandardResponseWithErrors(StandardResponse):
     data: Optional[Any] = None
     errors: Any = Field(..., description="Response errors")
+
+class SurveyUpdate(BaseModel):
+    title: Optional[str] = None
+    description: Optional[str] = None
