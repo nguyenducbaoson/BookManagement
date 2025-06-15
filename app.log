@@ -542,3 +542,1289 @@ TypeError: make_response() got an unexpected keyword argument 'status_code'
 2025-06-04 11:25:52,395 - ERROR - HTTP error: Not authenticated (status 401)
 2025-06-04 11:26:27,856 - ERROR - HTTP error: Not authenticated (status 401)
 2025-06-04 11:27:53,615 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-15 21:13:31,317 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-06-15 21:14:19,730 - ERROR - HTTP error: Not authenticated (status 401)
+2025-06-15 21:14:56,453 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\routers\auth.py", line 18, in login_for_access_token
+    user = authenticate_user(form_data.username, form_data.password)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 35, in authenticate_user
+    user = get_user(username)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 24, in get_user
+    user_data = users_collection.find_one({"username": username})
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\collection.py", line 1755, in find_one
+    for result in cursor.limit(-1):
+                  ~~~~~~~~~~~~^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1284, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1208, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1993, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._server_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        operation_id=self._operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+        server_selector,
+    ...<2 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+        selector,
+    ...<4 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+        selector, operation, server_selection_timeout, address, operation_id
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+        selector, server_timeout, operation, operation_id, address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+        f"{self._error_message(selector)}, Timeout: {timeout}s, Topology Description: {self.description!r}"
+    )
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684ed52a4d47c06fc2f7841e, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-15 21:15:26,853 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\routers\auth.py", line 18, in login_for_access_token
+    user = authenticate_user(form_data.username, form_data.password)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 35, in authenticate_user
+    user = get_user(username)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 24, in get_user
+    user_data = users_collection.find_one({"username": username})
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\collection.py", line 1755, in find_one
+    for result in cursor.limit(-1):
+                  ~~~~~~~~~~~~^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1284, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1208, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1993, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._server_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        operation_id=self._operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+        server_selector,
+    ...<2 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+        selector,
+    ...<4 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+        selector, operation, server_selection_timeout, address, operation_id
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+        selector, server_timeout, operation, operation_id, address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+        f"{self._error_message(selector)}, Timeout: {timeout}s, Topology Description: {self.description!r}"
+    )
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684ed52a4d47c06fc2f7841e, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-15 21:15:57,122 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\routers\auth.py", line 18, in login_for_access_token
+    user = authenticate_user(form_data.username, form_data.password)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 35, in authenticate_user
+    user = get_user(username)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 24, in get_user
+    user_data = users_collection.find_one({"username": username})
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\collection.py", line 1755, in find_one
+    for result in cursor.limit(-1):
+                  ~~~~~~~~~~~~^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1284, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1208, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1993, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._server_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        operation_id=self._operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+        server_selector,
+    ...<2 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+        selector,
+    ...<4 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+        selector, operation, server_selection_timeout, address, operation_id
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+        selector, server_timeout, operation, operation_id, address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+        f"{self._error_message(selector)}, Timeout: {timeout}s, Topology Description: {self.description!r}"
+    )
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684ed52a4d47c06fc2f7841e, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-15 21:16:27,393 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\routers\auth.py", line 18, in login_for_access_token
+    user = authenticate_user(form_data.username, form_data.password)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 35, in authenticate_user
+    user = get_user(username)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 24, in get_user
+    user_data = users_collection.find_one({"username": username})
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\collection.py", line 1755, in find_one
+    for result in cursor.limit(-1):
+                  ~~~~~~~~~~~~^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1284, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1208, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1993, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._server_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        operation_id=self._operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+        server_selector,
+    ...<2 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+        selector,
+    ...<4 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+        selector, operation, server_selection_timeout, address, operation_id
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+        selector, server_timeout, operation, operation_id, address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+        f"{self._error_message(selector)}, Timeout: {timeout}s, Topology Description: {self.description!r}"
+    )
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684ed52a4d47c06fc2f7841e, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-15 21:16:57,714 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\routers\auth.py", line 18, in login_for_access_token
+    user = authenticate_user(form_data.username, form_data.password)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 35, in authenticate_user
+    user = get_user(username)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 24, in get_user
+    user_data = users_collection.find_one({"username": username})
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\collection.py", line 1755, in find_one
+    for result in cursor.limit(-1):
+                  ~~~~~~~~~~~~^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1284, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1208, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1993, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._server_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        operation_id=self._operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+        server_selector,
+    ...<2 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+        selector,
+    ...<4 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+        selector, operation, server_selection_timeout, address, operation_id
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+        selector, server_timeout, operation, operation_id, address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+        f"{self._error_message(selector)}, Timeout: {timeout}s, Topology Description: {self.description!r}"
+    )
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684ed52a4d47c06fc2f7841e, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-15 21:17:27,828 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\routers\auth.py", line 18, in login_for_access_token
+    user = authenticate_user(form_data.username, form_data.password)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 35, in authenticate_user
+    user = get_user(username)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 24, in get_user
+    user_data = users_collection.find_one({"username": username})
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\collection.py", line 1755, in find_one
+    for result in cursor.limit(-1):
+                  ~~~~~~~~~~~~^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1284, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1208, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1993, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._server_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        operation_id=self._operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+        server_selector,
+    ...<2 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+        selector,
+    ...<4 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+        selector, operation, server_selection_timeout, address, operation_id
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+        selector, server_timeout, operation, operation_id, address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+        f"{self._error_message(selector)}, Timeout: {timeout}s, Topology Description: {self.description!r}"
+    )
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684ed52a4d47c06fc2f7841e, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-15 21:17:58,235 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\routers\auth.py", line 18, in login_for_access_token
+    user = authenticate_user(form_data.username, form_data.password)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 35, in authenticate_user
+    user = get_user(username)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 24, in get_user
+    user_data = users_collection.find_one({"username": username})
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\collection.py", line 1755, in find_one
+    for result in cursor.limit(-1):
+                  ~~~~~~~~~~~~^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1284, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1208, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1993, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._server_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        operation_id=self._operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+        server_selector,
+    ...<2 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+        selector,
+    ...<4 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+        selector, operation, server_selection_timeout, address, operation_id
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+        selector, server_timeout, operation, operation_id, address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+        f"{self._error_message(selector)}, Timeout: {timeout}s, Topology Description: {self.description!r}"
+    )
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684ed52a4d47c06fc2f7841e, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-15 21:17:58,403 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-15 21:18:29,094 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\routers\auth.py", line 53, in register_user
+    if users_collection.find_one({"username": user.username}):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\collection.py", line 1755, in find_one
+    for result in cursor.limit(-1):
+                  ~~~~~~~~~~~~^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1284, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1208, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1993, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._server_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        operation_id=self._operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+        server_selector,
+    ...<2 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+        selector,
+    ...<4 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+        selector, operation, server_selection_timeout, address, operation_id
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+        selector, server_timeout, operation, operation_id, address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+        f"{self._error_message(selector)}, Timeout: {timeout}s, Topology Description: {self.description!r}"
+    )
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684ed59e342b6122358b9656, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-15 21:18:59,298 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\routers\auth.py", line 18, in login_for_access_token
+    user = authenticate_user(form_data.username, form_data.password)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 35, in authenticate_user
+    user = get_user(username)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\auth\auth_handler.py", line 24, in get_user
+    user_data = users_collection.find_one({"username": username})
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\collection.py", line 1755, in find_one
+    for result in cursor.limit(-1):
+                  ~~~~~~~~~~~~^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1284, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1208, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1993, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._server_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        operation_id=self._operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+        server_selector,
+    ...<2 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+        selector,
+    ...<4 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+        selector, operation, server_selection_timeout, address, operation_id
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+        selector, server_timeout, operation, operation_id, address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+        f"{self._error_message(selector)}, Timeout: {timeout}s, Topology Description: {self.description!r}"
+    )
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684ed59e342b6122358b9656, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-15 21:35:31,252 - ERROR - Unhandled error occurred
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\app\routers\auth.py", line 53, in register_user
+    if users_collection.find_one({"username": user.username}):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\collection.py", line 1755, in find_one
+    for result in cursor.limit(-1):
+                  ~~~~~~~~~~~~^^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1284, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1208, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1993, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._server_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        operation_id=self._operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+        server_selector,
+    ...<2 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+        selector,
+    ...<4 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+        selector, operation, server_selection_timeout, address, operation_id
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+        selector, server_timeout, operation, operation_id, address
+    )
+  File "C:\Users\Admin\Desktop\BookManagement\BookManagement\venv\Lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+        f"{self._error_message(selector)}, Timeout: {timeout}s, Topology Description: {self.description!r}"
+    )
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684ed59e342b6122358b9656, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-00.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-01.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-mzi6cro-shard-00-02.xwrohj5.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>

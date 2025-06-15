@@ -57,3 +57,8 @@ class StandardResponseWithErrors(StandardResponse):
 class SurveyUpdate(BaseModel):
     title: Optional[str] = None
     description: Optional[str] = None
+
+class SurveyCreate(BaseModel):
+    Id: str
+    title: Optional[str] = None
+    description: Optional[str] = None
