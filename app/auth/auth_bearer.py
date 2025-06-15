@@ -66,5 +66,4 @@ async def get_current_active_superuser(current_user: UserInDB = Depends(get_curr
                 errors=None
             )
         )
-    
-    
+    return current_user
